@@ -1,10 +1,27 @@
-# UX Design
+# User Experience 
+## Target User
+## Goal
+## User Stories
 
 # Features
+##Database Structure
+
+# Design
+## Wireframes
+### Login page
+### Home page
+### Accounts page
+### Add transaction page
+## Colour Scheme
+## Fonts
 
 # Technologies
 
-# Manual Testing
+# Testing and validation
+## HTML
+## CSS
+## JavaScript
+## Python
 
 # Deployment
 
