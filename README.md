@@ -2,10 +2,10 @@
 
 # Features
 
-#Technologies
+# Technologies
 
-#Manual Testing
+# Manual Testing
 
-#Deployment
+# Deployment
 
-#References
+# References
