@@ -43,7 +43,7 @@ As a user I want to be able to make an account so only  I can access my stored i
 
 # Features
 ## Database Structure
-
+![erd](https://github.com/user-attachments/assets/547ecb80-9220-4f12-a95d-3967fa00cc9a)
 # Design
 ## Wireframes
 ### Login page
