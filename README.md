@@ -42,16 +42,25 @@ As a user I want to be able to make an account so only  I can access my stored i
 
 
 # Features
-##Database Structure
+## Database Structure
 
 # Design
 ## Wireframes
 ### Login page
+![Login page](https://github.com/user-attachments/assets/44ab6aa0-1945-4176-8a98-b4ed1b9771bc)
 ### Home page
+![Home page](https://github.com/user-attachments/assets/355546b4-a9cc-4097-833a-fafcb2774f09)
 ### Accounts page
+![Accounts page](https://github.com/user-attachments/assets/936ec059-271a-4da5-9da1-877a11e0a81e)
 ### Add transaction page
+![modal](https://github.com/user-attachments/assets/7b8ff477-192f-4a30-98be-299a4554fbc1)
 ## Colour Scheme
+![colourScheme](https://github.com/user-attachments/assets/4e331c55-fa85-4867-8831-345ef8f6c6d9)
+I have chosen the above colour scheme which will allow for good text contrast and a consistent look throughout the application.
+
 ## Fonts
+I have chosen the lato font because of its readability and simplicity.
+https://fonts.google.com/specimen/Lato
 
 # Technologies
 
