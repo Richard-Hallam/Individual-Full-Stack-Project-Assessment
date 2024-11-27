@@ -17,3 +17,7 @@ class Account(models.Model):
     account_id = models.AutoField(primary_key=True)
     account_name = models.CharField(max_length=255)
     account_value = models.FloatField(default=0.0)
+
+class Category(models.Model):
+    category_id = models.AutoField(primary_key=True)
+    category_name = models.CharField(max_length=255)
