@@ -7,9 +7,13 @@ class Transaction(models.Model):
     transaction_date = models.DateField()
     transaction_amount = models.FloatField()
     expense = models.BooleanField()
-    # account = models.ForeignKey('Account', on_delete=models.CASCADE)
-    # category = models.ForeignKey('Category', on_delete=models.CASCADE)
+    account = models.ForeignKey('Account', on_delete=models.CASCADE)
+    category = models.ForeignKey('Category', on_delete=models.CASCADE)
 
     def __str__(self):
         return self.transaction_name
     
+class Account(models.Model):
+    account_id = models.AutoField(primary_key=True)
+    account_name = models.CharField(max_length=255)
+    account_value = models.FloatField(default=0.0)
