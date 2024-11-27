@@ -71,7 +71,9 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'expensetracker.wsgi.application'
 
-
+CSRF_TRUSTED_ORIGINS = [
+    'https://8000-richardhall-individualf-a5cg8cbz6ke.ws.codeinstitute-ide.net'
+]
 # Database
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases
 
