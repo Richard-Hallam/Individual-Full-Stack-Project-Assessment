@@ -63,6 +63,11 @@ I have chosen the lato font because of its readability and simplicity.
 https://fonts.google.com/specimen/Lato
 
 # Technologies
+Django
+HTML
+CSS
+Bootstrap
+Crispy forms 2.0
 
 # Testing and validation
 ## HTML
