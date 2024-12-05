@@ -16,18 +16,11 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-<<<<<<< HEAD
 from home.views import home_page
+from transactions.views import transactions_list
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('home/', home_page, name='home')
-=======
-from home import views
-
-
-urlpatterns = [
-    path('admin/', admin.site.urls),
-    path('home/', home, name='home')
->>>>>>> d8c60df (added home.html)
+    path('home/', home_page, name='home'),
+    path('transactions/', transactions_list, name='transactions'),
 ]
