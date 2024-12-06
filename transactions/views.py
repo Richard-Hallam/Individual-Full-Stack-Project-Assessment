@@ -1,7 +1,15 @@
-from django.shortcuts import render
-from django.http import HttpResponse
 from django.template import loader
-# Create your views here.
+from .forms import TransactionForm
+from django.shortcuts import render
+from .models import Transaction
+
 def transactions_list(request):
-    template = loader.get_template('transaction_list.html')
-    return HttpResponse(template.render())
+    if request.method == 'POST':
+        form = TransactionForm(request.POST)
+        if form.is_valid():
+            form.save()
+            return redirect('transactions_list')
+    else:
+        form = TransactionForm()
+    transactions = Transaction.objects.all()
+    return render(request, 'transactions/transaction_list.html', {'transactions': transactions, 'form': form})
