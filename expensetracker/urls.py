@@ -21,7 +21,7 @@ from transactions.views import transactions_list
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('home/', home_page, name='home'),
+    path('', home_page, name='home'),
     path('transactions/', transactions_list, name='transactions'),
     path('login/', login_page, name='login_page')
 ]
