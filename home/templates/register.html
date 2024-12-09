@@ -1,7 +1,15 @@
 <!DOCTYPE html>
 <html>
-    <body>
-        <h1 class="heading">Register</h1>
-        <p class="home-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat exercitationem, possimus, repellendus fugit quod ut quia, velit animi dolores beatae laudantium recusandae perspiciatis optio qui aperiam nostrum unde fuga repudiandae.</p>
-    </body>
+<head>
+    <title>Sign Up</title>
+</head>
+<body>
+    <h2>Sign Up</h2>
+    <form method="post" action="{% url 'account_signup' %}">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Sign Up</button>
+    </form>
+    <p>Already have an account? <a href="{% url 'account_login' %}">Login</a></p>
+</body>
 </html>

@@ -13,4 +13,4 @@ def login(request):
 
 def account_signup(request):
     template = loader.get_template('register.html')
-    return HttpResponse(template.rendre())
+    return HttpResponse(template.render())
