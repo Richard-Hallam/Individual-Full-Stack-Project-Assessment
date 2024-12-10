@@ -24,4 +24,6 @@ def edit_transaction(request, transaction_id):
         if form.is_valid():
             form.save()
             return redirect('transactions_list')
-
+    else:
+        form = TransactionForm(instance=transaction)
+    return render(request, 'transactions/edit_transaction.html', {'form': form})
