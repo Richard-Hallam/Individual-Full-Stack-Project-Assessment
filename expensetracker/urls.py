@@ -17,7 +17,7 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 from home.views import home_page, login, account_signup
-from transactions.views import transactions_list
+from transactions.views import transactions_list, edit_transaction
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -25,5 +25,6 @@ urlpatterns = [
     path('transactions/', transactions_list, name='transactions'),
     path('login/', login, name='login_page'),
     path("accounts/", include("allauth.urls")),
-    path('account_signup', account_signup, name='sign up')
+    path('account_signup', account_signup, name='sign up'),
+    path('edit/<int:transaction_id>/', edit_transaction, name='edit_transaction'),
 ]

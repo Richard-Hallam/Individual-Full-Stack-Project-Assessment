@@ -5,7 +5,6 @@
     <title>Transaction List</title>
 </head>
 <body>
-    <!-- displaying Django messages -->
 <div class="container">
     <div class="row">
       <div class="col-md-8 offset-md-2">
@@ -23,7 +22,10 @@
     <h1>Transaction List</h1>
     <ul>
         {% for transaction in transactions %}
-            <li>{{ transaction.transaction_name }} - {{ transaction.transaction_amount }}</li>
+            <li>
+              {{ transaction.transaction_name }} - {{ transaction.transaction_amount }}
+              <a href="{% url 'edit_transaction' transaction.id %}">Edit</a>
+            </li>
         {% endfor %}
     </ul>
 
