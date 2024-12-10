@@ -4,13 +4,12 @@ from django.template import loader
 # Create your views here.
 
 def home_page(request):
-    template = loader.get_template('home.html')
-    return HttpResponse(template.render())
+    return render(request, 'home.html')
 
 def login(request):
     template = loader.get_template('login.html')
     return HttpResponse(template.render())
 
 def account_signup(request):
-    template = loader.get_template('register.html')
+    template = loader.get_template('signup.html')
     return HttpResponse(template.render())

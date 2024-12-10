@@ -22,9 +22,9 @@ from transactions.views import transactions_list, edit_transaction
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', home_page, name='home'),
-    path('transactions/', transactions_list, name='transactions'),
-    path('login/', login, name='login_page'),
     path("accounts/", include("allauth.urls")),
+    path('transactions/', transactions_list, name='transactions'),
+    path('account_login', login, name='login_page'),
     path('account_signup', account_signup, name='sign up'),
     path('edit/<int:transaction_id>/', edit_transaction, name='edit_transaction'),
 ]
