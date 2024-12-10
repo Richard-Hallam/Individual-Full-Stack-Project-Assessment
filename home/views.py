@@ -7,9 +7,7 @@ def home_page(request):
     return render(request, 'home.html')
 
 def login(request):
-    template = loader.get_template('login.html')
-    return HttpResponse(template.render())
+    return render(request, 'login.html')
 
 def account_signup(request):
-    template = loader.get_template('signup.html')
-    return HttpResponse(template.render())
+    return render( request, 'signup.html')
