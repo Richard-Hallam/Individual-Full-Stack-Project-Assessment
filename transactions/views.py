@@ -10,7 +10,7 @@ def transactions_list(request):
         form.save()
         messages.add_message(
             request, messages.SUCCESS,
-            'transaction submitted succsessfully'#
+            'transaction submitted succsessfully'
         )
     else:
         form = TransactionForm()
@@ -24,3 +24,4 @@ def edit_transaction(request, transaction_id):
         if form.is_valid():
             form.save()
             return redirect('transactions_list')
+

@@ -11,15 +11,15 @@
                 <a class="nav-link {% if request.path == logout_url %}active{% endif %}" aria-current="page" href="{% url 'account_logout' %}">Logout</a>
             </li>
         {% else %}
-<!-- <li class="nav-item">
-	<a class="nav-link {% if request.path == signup_url %}active{% endif %}" aria-current="page"
-		href="{% url 'account_login' %}">Register</a>
-</li>
-<li class="nav-item">
-	<a class="nav-link {% if request.path == login_url %}active{% endif %}" aria-current="page" href="{% url 'account_login' %}">Login</a>
-</li> -->
-            <a href="{{login_url}}">Login</a>
-            <a href="{% url 'account_signup' %}">Sign Up</a>
+           <ul> 
+                <li class="nav-item">
+                    <a class="nav-link {% if request.path == signup_url %}active{% endif %}" aria-current="page"
+                        href="{% url 'account_login' %}">Register</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link {% if request.path == login_url %}active{% endif %}" aria-current="page" href="{% url 'account_login' %}">Login</a>
+                </li> 
+            </ul>
         {% endif %}
         <h1 class="heading">Expense Tracker</h1>
         <p class="home-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat exercitationem, possimus, repellendus fugit quod ut quia, velit animi dolores beatae laudantium recusandae perspiciatis optio qui aperiam nostrum unde fuga repudiandae.</p>
