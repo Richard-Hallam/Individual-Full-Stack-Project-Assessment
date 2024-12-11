@@ -12,5 +12,8 @@
         <button type="submit">Yes, delete</button>
     </form>
     <a href="{% url 'transactions_list' %}">Cancel</a>
+    {% else %}
+    <p>You are not logged in</p>
+    {% endif %}
 </body>
 </html>
