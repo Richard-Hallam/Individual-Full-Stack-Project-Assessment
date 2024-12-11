@@ -46,3 +46,4 @@ def delete_transaction(request, transaction_id):
         )
         return redirect('transactions_list')
     return render(request, 'transactions/transaction_delete.html', {'transaction': transaction})
+
