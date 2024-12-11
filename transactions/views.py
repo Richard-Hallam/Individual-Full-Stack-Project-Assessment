@@ -6,6 +6,14 @@ from django.contrib import messages
 from django.http import HttpResponse
 
 
+def get_total_transaction_value(transactions):
+    """sums all transactions and returns the total"""
+    total = 0
+    for transaction in transactions:
+        total = total + transaction.transaction_amount
+    return total
+
+
 def transactions_list(request):
     if request.method == 'POST':
         form = TransactionForm(data=request.POST)
@@ -14,14 +22,18 @@ def transactions_list(request):
             request, messages.SUCCESS,
             'transaction submitted succsessfully'
         )
-        #return render(request, 'transactions/transaction_list.html')
         return(redirect('transactions_list'))
     else:
         form = TransactionForm()
         transactions = Transaction.objects.all()
-        context = {'form': form}
-        #return render(request, 'transactions/transaction_list.html', context)
-        return render(request, 'transactions/transaction_list.html', {'transactions': transactions, 'form': form})
+        total_transaction_value = get_total_transaction_value(transactions)
+        context = {
+            'transactions': transactions,
+            'form': form,
+            'total_transaction_value': total_transaction_value,
+                }
+        
+        return render(request, 'transactions/transaction_list.html', context)
 
 
 def edit_transaction(request, transaction_id):

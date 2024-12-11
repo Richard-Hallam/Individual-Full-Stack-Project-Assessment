@@ -17,6 +17,9 @@
         {% endfor %}
     </ul>
 
+    <h2>Summary</h2>
+    <p>Account Balance: {{ total_transaction_value }}</p>
+
     <h2>Add New Transaction</h2>
     <form method="post">
         {% csrf_token %}
