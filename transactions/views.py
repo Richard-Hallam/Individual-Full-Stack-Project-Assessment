@@ -12,10 +12,9 @@ def transactions_list(request):
             request, messages.SUCCESS,
             'transaction submitted succsessfully'
         )
+        return render(request, 'transactions/transaction_list.html')
     else:
-        form = TransactionForm()
-    transactions = Transaction.objects.all()
-    return render(request, 'transactions/transaction_list.html', {'transactions': transactions, 'form': form})
+        return render(request, 'transactions/transaction_list.html')
 
 def edit_transaction(request, transaction_id):
     transaction = get_object_or_404(Transaction, pk=transaction_id)
@@ -23,7 +22,7 @@ def edit_transaction(request, transaction_id):
         form = TransactionForm(request.POST, instance=transaction)
         if form.is_valid():
             form.save()
-            return redirect('transactions_list')
+            return redirect('transactions/transactions_list')
     else:
         form = TransactionForm(instance=transaction)
-    return render(request, 'transactions/edit_transaction.html', {'form': form})
+    return render(request, 'transactions/transactions_edit.html', {'form': form})

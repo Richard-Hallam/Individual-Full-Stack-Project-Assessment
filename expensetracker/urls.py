@@ -23,9 +23,9 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', home_page, name='home'),
     path("accounts/", include("allauth.urls")),
-    # path('transactions/', transactions_list, name='transactions'),
+    #path('transactions/', transactions_list, name='transactions'),
     path('transactions/', include('transactions.urls')),
     path('account_login', login, name='login_page'),
     path('account_signup', account_signup, name='sign up'),
-    # path('edit/<int:transaction_id>/', edit_transaction, name='edit_transaction'),
+    path('edit/<int:transaction_id>/', edit_transaction, name='edit_transaction'),
 ]
