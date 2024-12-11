@@ -10,7 +10,10 @@ def get_total_transaction_value(transactions):
     """sums all transactions and returns the total"""
     total = 0
     for transaction in transactions:
-        total = total + transaction.transaction_amount
+        if transaction.expense is False:
+            total = total + transaction.transaction_amount
+        elif transaction.expense is True:
+            total = total - transaction.transaction_amount
     return total
 
 
@@ -22,7 +25,8 @@ def transactions_list(request):
             request, messages.SUCCESS,
             'transaction submitted succsessfully'
         )
-        return(redirect('transactions_list'))
+        return (redirect('transactions_list'))
+
     else:
         form = TransactionForm()
         transactions = Transaction.objects.all()
@@ -32,7 +36,7 @@ def transactions_list(request):
             'form': form,
             'total_transaction_value': total_transaction_value,
                 }
-        
+
         return render(request, 'transactions/transaction_list.html', context)
 
 
@@ -44,9 +48,15 @@ def edit_transaction(request, transaction_id):
             form.save()
             transactions = Transaction.objects.all()
             return redirect('transactions')
+
     else:
         form = TransactionForm(instance=transaction)
-    return render(request, 'transactions/transaction_edit.html', { 'form': form})
+    return render(
+        request,
+        'transactions/transaction_edit.html',
+        {'form': form}
+    )
+
 
 def delete_transaction(request, transaction_id):
     transaction = get_object_or_404(Transaction, pk=transaction_id)
@@ -57,5 +67,7 @@ def delete_transaction(request, transaction_id):
             'Transaction deleted successfully'
         )
         return redirect('transactions_list')
-    return render(request, 'transactions/transaction_delete.html', {'transaction': transaction})
 
+    return render(request, 'transactions/transaction_delete.html', {
+        'transaction': transaction
+        })

@@ -64,10 +64,30 @@ https://fonts.google.com/specimen/Lato
 
 # Technologies
 Django
+
 HTML
+
 CSS
-Bootstrap
+
+Bootstrap 5
+
 Crispy forms 2.0
+
+asgiref
+
+
+dj-database-url
+
+
+django-allauth
+
+
+psycopg2
+
+
+
+
+
 
 # Testing and validation
 ## HTML
