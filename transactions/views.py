@@ -1,6 +1,6 @@
 from django.template import loader
 from .forms import TransactionForm
-from django.shortcuts import render, redirect
+from django.shortcuts import render, redirect, get_object_or_404
 from .models import Transaction
 from django.contrib import messages
 from django.http import HttpResponse
@@ -31,15 +31,14 @@ def edit_transaction(request, transaction_id):
         if form.is_valid():
             form.save()
             transactions = Transaction.objects.all()
-            return redirect('transactions/transactions_list', {'transactions' : transactions })
+            return redirect('transactions')
     else:
         form = TransactionForm(instance=transaction)
-        transactions = Transaction.objects.all()
-    return render(request, 'transactions/transactions_edit.html', {'transactions': transactions, 'form': form})
+    return render(request, 'transactions/transaction_edit.html', { 'form': form})
 
 def delete_transaction(request, transaction_id):
     transaction = get_object_or_404(Transaction, pk=transaction_id)
     if request.method == 'POST':
         transaction.delete()
         return redirect('transactions_list')
-    return render(request, 'transactions/delete_transaction.html', {'transactions': transaction})
+    return render(request, 'transactions/transaction_list.html', {'transactions': transaction})
