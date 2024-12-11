@@ -91,10 +91,16 @@ psycopg2
 
 # Testing and validation
 ## HTML
+Html was validated using the w3 markup validation service https://validator.w3.org/nu/.
+This did throw up errors from the parts of the html that were for django specifically but as the validator does not cover django they could be ignored.
 ## CSS
-## JavaScript
+CSS was validated using jigsaw https://jigsaw.w3.org/css-validator/
+
 ## Python
+Python was validated using the CI Python Linter https://pep8ci.herokuapp.com/#
+
+## User stories
 
 # Deployment
-
+The app was deployed on heroku using a postgres database provided by the code institute.
 # References
