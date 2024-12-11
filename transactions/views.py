@@ -40,5 +40,9 @@ def delete_transaction(request, transaction_id):
     transaction = get_object_or_404(Transaction, pk=transaction_id)
     if request.method == 'POST':
         transaction.delete()
+        messages.add_message(
+            request, messages.SUCCESS,
+            'Transaction deleted successfully'
+        )
         return redirect('transactions_list')
-    return render(request, 'transactions/transaction_list.html', {'transactions': transaction})
+    return render(request, 'transactions/transaction_delete.html', {'transaction': transaction})
