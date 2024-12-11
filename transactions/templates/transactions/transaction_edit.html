@@ -5,15 +5,15 @@
 </head>
 <body>
     <h2>Edit Transaction</h2>
-     <ul>
-        {% for transaction in transactions %}
-            <li>
-                {{ transaction.transaction_name }} - {{ transaction.transaction_amount }}
-                <a href="{% url 'edit_transaction' transaction.id %}">Edit</a>
-                <a href="{% url 'delete_transaction' transaction.id %}">Delete</a>
-            </li>
-        {% endfor %}
-    </ul>
+        <ul>
+            {% for transaction in transactions %}
+                <li>
+                    {{ transaction.transaction_name }} - {{ transaction.transaction_amount }}
+                    <a href="{% url 'edit_transaction' transaction.transaction_id %}">Edit</a>
+                    <a href="{% url 'delete_transaction' transaction.transaction_id %}">Delete</a>
+                </li>
+            {% endfor %}
+        </ul>
 
     <form method="post">
         {% csrf_token %}
