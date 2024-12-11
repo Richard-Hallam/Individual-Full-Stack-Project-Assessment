@@ -1,30 +1,17 @@
-
+<!-- transactions/templates/transactions/transaction_list.html -->
 <!DOCTYPE html>
 <html>
 <head>
     <title>Transaction List</title>
 </head>
 <body>
-<div class="container">
-    <div class="row">
-      <div class="col-md-8 offset-md-2">
-        {% for message in messages %}
-        <div class="alert {{ message.tags }} alert-dismissible
-          fade show" id="msg" role="alert">
-          {{ message | safe }}
-          <button type="button" class="btn-close"
-            data-bs-dismiss="alert" aria-label="Close"></button>
-        </div>
-        {% endfor %}
-      </div>
-    </div>
-  </div>
     <h1>Transaction List</h1>
     <ul>
         {% for transaction in transactions %}
             <li>
-              {{ transaction.transaction_name }} - {{ transaction.transaction_amount }}
-              <a href="{% url 'edit_transaction' transaction.id %}">Edit</a>
+                {{ transaction.transaction_name }} - {{ transaction.transaction_amount }}
+                <a href="{% url 'edit_transaction' transaction.id %}">Edit</a>
+                <a href="{% url 'delete_transaction' transaction.id %}">Delete</a>
             </li>
         {% endfor %}
     </ul>
@@ -35,5 +22,6 @@
         {{ form.as_p }}
         <button type="submit">Add Transaction</button>
     </form>
+
 </body>
 </html>
