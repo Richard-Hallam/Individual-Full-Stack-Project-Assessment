@@ -5,8 +5,18 @@
 <!DOCTYPE html>
 <html>
     <body>
-        <h1>Username: {{ user.username }} {{ user }} !</h1>
+        <nav>
+            <a class="nav-link" href="{% url 'transactions' %}">Transactions</a>
+            <a class="nav-link" href="{% url 'home' %}">Home</a>
+            {% if user.is_authenticated %}
+            <a class="nav-link" href="{% url 'account_logout' %}">Logout</a>
+            {% else %}
+            <a class="nav-link" href="{% url 'account_login' %}">Login</a>
+            {% endif %}
+
+        </nav>
         {% if user.is_authenticated %}
+        <h1>You are logged in as: {{ user.username }} {{ user }} </h1>
             <ul>
                 <li class="nav-item">
                     <a class="nav-link {% if request.path == logout_url %}active{% endif %}" aria-current="page" href="{% url 'account_logout' %}">Logout</a>
@@ -27,11 +37,11 @@
                 </li> 
                 <li class="nav-item">
                     <a class="nav-link {% if request.path == signup_url %}active{% endif %}" aria-current="page"
-                        href="{% url 'transactions/' %}">Transactions</a>
+                        href="{% url 'transactions' %}">Transactions</a>
                 </li>
             </ul>
         {% endif %}
         <h1 class="heading">Expense Tracker</h1>
-        <p class="home-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat exercitationem, possimus, repellendus fugit quod ut quia, velit animi dolores beatae laudantium recusandae perspiciatis optio qui aperiam nostrum unde fuga repudiandae.</p>
+        <p class="home-text">This is an expense management tool used to keep track of expenses.</p>
     </body>
 </html>

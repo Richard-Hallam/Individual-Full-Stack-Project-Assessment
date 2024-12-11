@@ -4,6 +4,7 @@
     <title>Delete Transaction</title>
 </head>
 <body>
+    {% if user.is_authenticated %}
     <h2>Are you sure you want to delete this transaction?</h2>
     <p>{{ transaction.transaction_name }} - {{ transaction.transaction_amount }}</p>
     <form method="post">
