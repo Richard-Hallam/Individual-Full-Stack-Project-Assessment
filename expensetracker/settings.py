@@ -103,7 +103,7 @@ WSGI_APPLICATION = 'expensetracker.wsgi.application'
 CSRF_TRUSTED_ORIGINS = [
     'https://8000-richardhall-individualf-a5cg8cbz6ke.ws.codeinstitute-ide.net/',
     'https://8000-richardhall-individualf-a5cg8cbz6ke.ws.codeinstitute-ide.net',
-    '.herokuapp.com',
+    'https://herokuapp.com',
 ]
 
 
