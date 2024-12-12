@@ -33,7 +33,8 @@ DEBUG = False
 
 ALLOWED_HOSTS = [
                 '8000-richardhall-individualf-a5cg8cbz6ke.ws.codeinstitute-ide.net',
-                'https://django-individual-assessment-4aa62b688f33.herokuapp.com/'
+                'https://django-individual-assessment-4aa62b688f33.herokuapp.com/',
+                '.herokuapp.com',
                     ]
 
 
