@@ -92,6 +92,11 @@ psycopg2
 
 
 # Testing and validation
+
+## Manual testing
+At the end of the development process I went through every available url while both logged in and logged out to ensure they behaved as expected.
+I also added, edited and deleted multiple transactions to ensure they behave as expected.
+
 ## HTML
 Html was validated using the w3 markup validation service https://validator.w3.org/nu/.
 This did throw up errors from the parts of the html that were for django specifically but as the validator does not cover django they could be ignored.
