@@ -103,6 +103,7 @@ WSGI_APPLICATION = 'expensetracker.wsgi.application'
 CSRF_TRUSTED_ORIGINS = [
     'https://8000-richardhall-individualf-a5cg8cbz6ke.ws.codeinstitute-ide.net/',
     'https://8000-richardhall-individualf-a5cg8cbz6ke.ws.codeinstitute-ide.net',
+    '.herokuapp.com',
 ]
 
 
@@ -119,6 +120,7 @@ CSRF_TRUSTED_ORIGINS = [
 DATABASES = {
     'default': dj_database_url.parse(os.environ.get("DATABASE_URL"))
 }
+
 
 # Password validation
 # https://docs.djangoproject.com/en/4.2/ref/settings/#auth-password-validators
