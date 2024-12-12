@@ -100,11 +100,16 @@ I also added, edited and deleted multiple transactions to ensure they behave as 
 ## HTML
 Html was validated using the w3 markup validation service https://validator.w3.org/nu/.
 This did throw up errors from the parts of the html that were for django specifically but as the validator does not cover django they could be ignored.
+![homehtmlvalidator](https://github.com/user-attachments/assets/d83e797f-cf86-4f4b-ae89-d49afc6a2aac)
+
 ## CSS
 CSS was validated using jigsaw https://jigsaw.w3.org/css-validator/
 
 ## Python
 Python was validated using the CI Python Linter https://pep8ci.herokuapp.com/#
+discovered errors were corrected
+![transactionsModels](https://github.com/user-attachments/assets/1334b087-b8f0-4978-ab2d-83de355fc357)
+![home_views](https://github.com/user-attachments/assets/39b63d73-50f6-46e5-ac01-5f1d89425bfe)
 
 ## User stories
 
