@@ -1,6 +1,8 @@
 # User Experience 
 ## Target User
+The target use is anyone who wants to have a single place to keep track of their purchases and incomes.
 ## Goal
+Make an easy to use trasaction tracking app.
 ## User Stories
 ### User Story: Create Account
 As a user I want to be able to make an account so only  I can access my stored information
@@ -100,6 +102,39 @@ CSS was validated using jigsaw https://jigsaw.w3.org/css-validator/
 Python was validated using the CI Python Linter https://pep8ci.herokuapp.com/#
 
 ## User stories
+
+As a user I want to be able to make an account so only  I can access my stored information **PASS**
+
+
+As an existing user, I want to log in with my credentials, So that I can access my data.**PASS**
+
+
+
+As a user, I want to add new transactions to the app, So that I can keep track of my spending.**PASS**
+
+
+
+As a user, I want to view a list of my transactions, So that I can review my spending history.**PASS**
+
+
+
+As a user, I want to delete a transaction from the app, So that I can correct any mistakes in my records.**PASS**
+
+
+
+As a user, I want to update existing transactions, So that I can modify incorrect information or change details.**PASS**
+
+
+As a user with multiple accounts, I want to switch between different account profiles, So that I can manage transactions for various sources like personal and business.**FAIL**
+
+
+As a user, I want to categorize my transactions, So that I can analyze spending by categories.**FAIL**
+
+
+As a user, I want to view my data in graph form, So that I can easily understand trends and patterns in my spending.**FAIL**
+
+
+As a user, I want to see a summary of my current money in all accounts along with a total income and total expense summary for the month**FAIL**
 
 # Deployment
 The app was deployed on heroku using a postgres database provided by the code institute.
