@@ -32,29 +32,34 @@
             {% endif %}
         </div>
     </nav>
-    {% if user.is_authenticated %}
-    <h2>Edit Transaction</h2>
-        <ul>
-            {% for transaction in transactions %}
-                <li>
-                    {{ transaction.transaction_name }} - {{ transaction.transaction_amount }}
-                    <a href="{% url 'edit_transaction' transaction.transaction_id %}">Edit Me</a>
-                    <a href="{% url 'delete_transaction' transaction.transaction_id %}">Delete</a>
-                </li>
-            {% endfor %}
-        </ul>
-
-    <form method="post">
-        {% csrf_token %}
-        {{ form.as_p }}
-        <button type="submit">Save Changes</button>
-    </form>
-    <a href="{% url 'transactions_list' %}">Cancel</a>
-    {% else %}
-    <h1>Please login to view this content</h1>
-    {% endif %}
+    <div class="d-flex flex-column align-items-center align-self-centre">
+        {% if user.is_authenticated %}
+        <h2>Edit Transaction</h2>
+        <div class="text-center w-50">
+            <ul class="list-unstyled">
+                {% for transaction in transactions %}
+                    <li>
+                        {{ transaction.transaction_name }} - {{ transaction.transaction_amount }}
+                        <a href="{% url 'edit_transaction' transaction.transaction_id %}">Edit Me</a>
+                        <a href="{% url 'delete_transaction' transaction.transaction_id %}">Delete</a>
+                    </li>
+                {% endfor %}
+            </ul>
+            <form method="post">
+                {% csrf_token %}
+                {{ form.as_p }}
+                <div class="d-flex justify-content-center">
+                    <button type="submit" class="btn btn-primary me-2">Save Changes</button>
+                    <a href="{% url 'transactions_list' %}" class="btn btn-secondary">Cancel</a>
+                </div>
+            </form>
+        </div>
+        {% else %}
+        <h1>Please login to view this content</h1>
+        {% endif %}
+    </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous">
-        </script>
+    </script>
 </body>
 </html>
