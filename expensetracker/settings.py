@@ -28,12 +28,14 @@ TEMPLATES_DIR = os.path.join(BASE_DIR, 'templates')
 SECRET_KEY = os.environ.get("SECRET_KEY")
 
 
+
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = [
                 '8000-richardhall-individualf-a5cg8cbz6ke.ws.codeinstitute-ide.net',
                 'https://django-individual-assessment-4aa62b688f33.herokuapp.com/',
+                '8000-richardhall-individualf-i838pfwiyhk.ws.codeinstitute-ide.net',
                 '.herokuapp.com',
                     ]
 
@@ -107,14 +109,22 @@ WSGI_APPLICATION = 'expensetracker.wsgi.application'
 CSRF_TRUSTED_ORIGINS = [
     'https://8000-richardhall-individualf-a5cg8cbz6ke.ws.codeinstitute-ide.net/',
     'https://8000-richardhall-individualf-a5cg8cbz6ke.ws.codeinstitute-ide.net',
+    'https://8000-richardhall-individualf-i838pfwiyhk.ws.codeinstitute-ide.net',
     'https://herokuapp.com',
 ]
 
 
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.sqlite3',
+#         'NAME': BASE_DIR / 'db.sqlite3',
+#     }
+# }
 
 DATABASES = {
     'default': dj_database_url.parse(os.environ.get("DATABASE_URL"))
 }
+
 STATIC_URL = 'static/'
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 # Password validation

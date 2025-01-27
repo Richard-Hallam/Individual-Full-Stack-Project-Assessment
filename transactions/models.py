@@ -8,8 +8,8 @@ class Transaction(models.Model):
     transaction_date = models.DateField()
     transaction_amount = models.FloatField()
     expense = models.BooleanField()
-    account = models.ForeignKey('Account', on_delete=models.CASCADE)
-    category = models.ForeignKey('Category', on_delete=models.CASCADE)
+    #account = models.ForeignKey('Account', on_delete=models.CASCADE)
+    #category = models.ForeignKey('Category', on_delete=models.CASCADE)
 
 
     def __str__(self):
