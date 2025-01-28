@@ -36,9 +36,9 @@
             {% endif %}
         </div>
     </nav>
-    <div class="container-fluid container">
+    <div >
         {% if user.is_authenticated %}
-            <div class="col-12 col-md-8 col-lg-6 text-center container">
+            <div class="text-center container">
                 <h1 class="h1">Transaction List</h1>
                 <ul class="list-unstyled">
                     {% for transaction in transactions %}
