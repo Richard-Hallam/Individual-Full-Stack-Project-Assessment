@@ -43,7 +43,12 @@
                 <ul class="list-unstyled">
                     {% for transaction in transactions %}
                         <li class="list-unstyled">
-                            {{ transaction.transaction_name }} - {{ transaction.transaction_amount }}
+                            {{ transaction.transaction_name }} - {{ transaction.transaction_amount }} 
+                            {% if transaction.expense %}
+                                    Expense
+                                {% else %}
+                                    Income
+                                {% endif %}
                             <a href="{% url 'edit_transaction' transaction.transaction_id %}">Edit</a>
                             <a href="{% url 'delete_transaction' transaction.transaction_id %}">Delete</a>
                         </li>

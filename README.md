@@ -97,6 +97,19 @@ psycopg2
 At the end of the development process I went through every available url while both logged in and logged out to ensure they behaved as expected.
 I also added, edited and deleted multiple transactions to ensure they behave as expected.
 
+### Manual Tests
+#### register account
+    Registration of account functions correctly 
+#### login to account
+    Login functions correctly
+#### Navigate to transactions page
+    Navigation functions correctly
+#### Page shows a list of transactions
+    Transaction list is shown
+#### Create a new transaction
+    New transaction creation functions correctly
+#### Account balance displays correct ammount when transaction is added 
+
 ## HTML
 Html was validated using the w3 markup validation service https://validator.w3.org/nu/.
 This did throw up errors from the parts of the html that were for django specifically but as the validator does not cover django they could be ignored.
@@ -111,7 +124,7 @@ discovered errors were corrected
 ![transactionsModels](https://github.com/user-attachments/assets/1334b087-b8f0-4978-ab2d-83de355fc357)
 ![home_views](https://github.com/user-attachments/assets/39b63d73-50f6-46e5-ac01-5f1d89425bfe)
 
-## User stories
+## User stories 
 
 As a user I want to be able to make an account so only  I can access my stored information **PASS**
 
@@ -135,16 +148,6 @@ As a user, I want to delete a transaction from the app, So that I can correct an
 As a user, I want to update existing transactions, So that I can modify incorrect information or change details.**PASS**
 
 
-As a user with multiple accounts, I want to switch between different account profiles, So that I can manage transactions for various sources like personal and business.**FAIL**
-
-
-As a user, I want to categorize my transactions, So that I can analyze spending by categories.**FAIL**
-
-
-As a user, I want to view my data in graph form, So that I can easily understand trends and patterns in my spending.**FAIL**
-
-
-As a user, I want to see a summary of my current money in all accounts along with a total income and total expense summary for the month**FAIL**
 
 # Deployment
 The app was deployed on heroku using a postgres database provided by the code institute.
