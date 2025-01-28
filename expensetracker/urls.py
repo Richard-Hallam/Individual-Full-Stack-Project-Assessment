@@ -18,6 +18,8 @@ from django.contrib import admin
 from django.urls import path, include
 from home.views import home_page, login, account_signup
 from transactions.views import transactions_list, edit_transaction
+from django.conf import settings
+from django.conf.urls.static import static
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -26,4 +28,4 @@ urlpatterns = [
     path('transactions/', include('transactions.urls')),
     path('accounts/', include('allauth.urls')),
     path('edit/<int:transaction_id>/', edit_transaction, name='edit_transaction'),
-]
+] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)

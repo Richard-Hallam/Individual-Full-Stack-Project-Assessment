@@ -1,0 +1,78 @@
+
+body {
+    font-family: 'Lato', sans-serif;
+    padding: 5%vw
+}
+
+/* Media query for small devices (max-width: 375px) */
+@media (max-width: 375px) {
+    h1, h2, h3, h4, h5, h6 {
+        font-size: 3rem;
+    }
+
+    .navbar .nav-link {
+        font-size: 2rem;
+    }
+
+    .container {
+        width: 0.9vw;
+        padding: 0 15px;
+    }
+
+    .btn {
+        font-size: 2rem;
+    }
+
+    .list-unstyled  {
+        font-size: 2rem;
+    }
+    
+    
+}
+
+/* Media query for small devices (min-width: 376px and max-width: 767px) */
+@media (min-width: 376px) and (max-width: 767px) {
+    h1, h2, h3, h4, h5, h6 {
+        font-size: 2.5rem;
+    }
+
+    .navbar .nav-link {
+        font-size: 1.5rem;
+    }
+
+    .container {
+        padding: 0 20px;
+    }
+
+    .btn {
+        font-size: 1.5rem;
+    }
+
+    .list-unstyled li {
+        font-size: 1.5rem;
+    }
+}
+
+/* Media query for tablets (min-width: 768px and max-width: 1024px) */
+@media (min-width: 768px) and (max-width: 1024px) {
+    h1, h2, h3, h4, h5, h6 {
+        font-size: 1.5rem;
+    }
+
+    .navbar .nav-link {
+        font-size: 1rem;
+    }
+
+    .container {
+        padding: 0 30px;
+    }
+
+    .btn {
+        font-size: 1rem;
+    }
+
+    .list-unstyled li {
+        font-size: 1rem;
+    }
+}
+
