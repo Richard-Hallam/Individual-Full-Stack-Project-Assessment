@@ -109,6 +109,19 @@ I also added, edited and deleted multiple transactions to ensure they behave as 
 #### Create a new transaction
     New transaction creation functions correctly
 #### Account balance displays correct ammount when transaction is added 
+    correct balance displays for income 
+    correct balance displays for expense
+#### Edit a transaction
+    Correct balance displays for income
+    correct balance displays for expense
+#### Account balance displays correct ammount when transaction is edited
+    correct balance displays for income 
+    correct balance displays for expense
+#### Transactions can be deleted
+    Transaction deletion functions correctly
+#### #### Account balance displays correct ammount when transaction is deleted
+    correct balance displays for income 
+    correct balance displays for expense
 
 ## HTML
 Html was validated using the w3 markup validation service https://validator.w3.org/nu/.

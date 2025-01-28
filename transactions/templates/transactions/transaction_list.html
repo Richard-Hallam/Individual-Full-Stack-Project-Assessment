@@ -43,7 +43,7 @@
                 <ul class="list-unstyled">
                     {% for transaction in transactions %}
                         <li class="list-unstyled">
-                            {{ transaction.transaction_name }} - {{ transaction.transaction_amount }} 
+                            {{ transaction.transaction_name }}: £{{ transaction.transaction_amount }} 
                             {% if transaction.expense %}
                                     Expense
                                 {% else %}
@@ -56,7 +56,7 @@
                 </ul>
 
                 <h2 class="h2">Summary</h2>
-                <p>Account Balance: {{ total_transaction_value }}</p>
+                <p>Account Balance: £{{ total_transaction_value }}</p>
 
                 <h2>Add New Transaction</h2>
                 <form method="post">
