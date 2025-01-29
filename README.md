@@ -26,22 +26,6 @@ As a user I want to be able to make an account so only  I can access my stored i
 
 **As a user,** I want to update existing transactions, So that I can modify incorrect information or change details.
 
-### User Story: Manage Multiple Accounts
-
-**As a user with multiple accounts,** I want to switch between different account profiles, So that I can manage transactions for various sources like personal and business.
-
-### User Story: Transaction Categorization
-
-**As a user,** I want to categorize my transactions, So that I can analyze spending by categories.
-
-### User Story: Graphical Representation
-
-**As a user,** I want to view my data in graph form, So that I can easily understand trends and patterns in my spending.
-
-### User Story: See summary
-
-**As a user,** I want to see a summary of my current money in all accounts along with a total income and total expense summary for the month
-
 
 # Features
 ## Database Structure
@@ -102,10 +86,14 @@ I also added, edited and deleted multiple transactions to ensure they behave as 
     Registration of account functions correctly 
 #### login to account
     Login functions correctly
+#### Logout of account
+    user is able to logout
+    The user does not have their data displayed when they are logged out.
 #### Navigate to transactions page
     Navigation functions correctly
 #### Page shows a list of transactions
     Transaction list is shown
+    Transaction list is correct for the data in the database
 #### Create a new transaction
     New transaction creation functions correctly
 #### Account balance displays correct ammount when transaction is added 
@@ -119,7 +107,7 @@ I also added, edited and deleted multiple transactions to ensure they behave as 
     correct balance displays for expense
 #### Transactions can be deleted
     Transaction deletion functions correctly
-#### #### Account balance displays correct ammount when transaction is deleted
+#### Account balance displays correct ammount when transaction is deleted
     correct balance displays for income 
     correct balance displays for expense
 
@@ -161,7 +149,9 @@ As a user, I want to delete a transaction from the app, So that I can correct an
 As a user, I want to update existing transactions, So that I can modify incorrect information or change details.**PASS**
 
 
+# Agile
+During the development aglie methodology was used throughout. The project used project board to track tasks that were planned, in progress and completed. These tasks were designed to meet the requirements of the user stories to ensure the project functions as intended.
+
 
 # Deployment
 The app was deployed on heroku using a postgres database provided by the code institute.
-# References
