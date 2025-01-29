@@ -153,6 +153,7 @@ As a user, I want to update existing transactions, So that I can modify incorrec
 
 # Agile
 During the development aglie methodology was used throughout. The project used project board to track tasks that were planned, in progress and completed. These tasks were designed to meet the requirements of the user stories to ensure the project functions as intended.
+![projectBoard](https://github.com/user-attachments/assets/19385589-1e6e-4be7-8220-fa3aacc2761d)
 
 
 # Deployment
