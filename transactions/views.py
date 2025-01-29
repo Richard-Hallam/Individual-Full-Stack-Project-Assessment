@@ -40,14 +40,6 @@ def transactions_list(request):
         return render(request, 'transactions/transaction_list.html', context)
 
 
-# def edit_transaction(request, transaction_id):
-#     transaction = get_object_or_404(Transaction, pk=transaction_id)
-#     if request.method == 'POST':
-#         form = TransactionForm(request.POST, instance=transaction)
-#         if form.is_valid():
-#             form.save()
-#             transactions = Transaction.objects.all()
-#             return redirect('transactions')
 def edit_transaction(request, transaction_id):
     transaction = get_object_or_404(Transaction, pk=transaction_id)
     if request.method == 'POST':
