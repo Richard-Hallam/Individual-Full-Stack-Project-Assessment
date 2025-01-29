@@ -125,7 +125,9 @@ discovered errors were corrected
 ![transactionsModels](https://github.com/user-attachments/assets/1334b087-b8f0-4978-ab2d-83de355fc357)
 ![home_views](https://github.com/user-attachments/assets/39b63d73-50f6-46e5-ac01-5f1d89425bfe)
 
-## User stories 
+
+## User stories checklist
+
 
 As a user I want to be able to make an account so only  I can access my stored information **PASS**
 
